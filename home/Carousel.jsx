@@ -8,12 +8,12 @@ import delfina from "../owners/Delfina.png"
 const Carousel = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setActiveIndex((prevIndex) => (prevIndex + 1) % 2);
-    //     }, 5000); // Cambia cada 3 segundos
-    //     return () => clearInterval(interval);
-    // }, []);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveIndex((prevIndex) => (prevIndex + 1) % 2);
+        }, 5000); // Cambia cada 3 segundos
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <div className="carousel">
