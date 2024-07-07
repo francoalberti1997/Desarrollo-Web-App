@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-dark-blue: #003366; /* Azul Oscuro */
+    --color-medium-blue: #006699; /* Azul Medio */
+    --color-light-blue: #3399cc; /* Azul Claro */
+    --color-pastel-blue: #99ccff; /* Azul Pastel */
+    --color-light-gray: #f0f0f0c7; /* Gris Claro */
+    --color-dark-gray: #333333; /* Gris Oscuro */
+    --violeta: #5929e5;
+    --violeta1: #9933CC;
+    --violeta2: #9966CC
+}
+
+.person-container {
+    min-height: 60vh;
+    display: flex;
+    /* flex-direction: column; */
+    /* opacity: 0.7; */
+    z-index: 10;
+    width: 80%;
+}
+
+.person {
+    flex: 2;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.person:hover {
+    flex: 5;
+    cursor: pointer;
+}
+
+.person img {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: grayscale(10);
+    transition: 0.2s ease;
+}
+
+.info {
+    position: absolute;
+    color: #fff;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 100%; */
+    bottom: -400px;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.info .social-media {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #fff;
+    background: #111;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 17px;
+}
+
+.person:hover .info {
+    bottom: 80px;
+}
+
+.person:hover img {
+    filter: grayscale(0);
+}
+
+/*Loading*/
+
+
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 164px;
+    /* opacity: 0.5; */
+    aspect-ratio: 1;
+    background: 
+      radial-gradient(farthest-side at bottom right,#fff 90%,#0000),
+      radial-gradient(farthest-side at bottom left ,#fff 90%,#0000),
+      radial-gradient(farthest-side at top    right,#fff 90%,#0000),
+      radial-gradient(farthest-side at top    left ,#fff 90%,#0000),
+      radial-gradient(farthest-side at bottom right,#fff 90%,#0000),
+      radial-gradient(farthest-side at bottom left ,#fff 90%,#0000),
+      radial-gradient(farthest-side at top    right,#fff 90%,#0000),
+      radial-gradient(farthest-side at top    left ,#fff 90%,#0000),
+      radial-gradient(farthest-side at bottom right,#fff 90%,#0000),
+      radial-gradient(farthest-side at bottom left ,#fff 90%,#0000),
+      radial-gradient(farthest-side at top    right,#fff 90%,#0000),
+      radial-gradient(farthest-side at top    left ,#fff 90%,#0000);
+    background-size: 25% 25%;
+    background-repeat: no-repeat;
+    /* top: 40%; */
+    /* left: 45%; */
+    /* position: absolute; */
+    animation: l16 5s infinite;
+}
+
+  @keyframes fadeIn {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  .preloader{
+    background-image: linear-gradient(to left bottom, var(--color-medium-blue), #00398a, var(--color-dark-blue));
+    width: 100% !important;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh !important;
+  }
+
+  .preloader.logo-pre{
+    animation: fadeIn 6s;
+  }
+
+  .preloader img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+  }
+
+  @keyframes l16{
+    0% {background-position: 
+          calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+          calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+          calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3)}
+    16.67% {background-position: 
+          calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3),
+          calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+          calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3)}
+    33.33% {background-position: 
+          calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3),
+          calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3),
+          calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3)}
+    50% {background-position: 
+          calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3),
+          calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3),
+          calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3)}
+    66.67% {background-position: 
+          calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+          calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3),
+          calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3)}
+    83.33% {background-position: 
+          calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+          calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+          calc(0*100%/3) calc(0*100%/3), calc(3*100%/3) calc(0*100%/3), calc(0*100%/3) calc(3*100%/3), calc(3*100%/3) calc(3*100%/3)}
+    100% {background-position: 
+          calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+          calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3),
+          calc(1*100%/3) calc(1*100%/3), calc(2*100%/3) calc(1*100%/3), calc(1*100%/3) calc(2*100%/3), calc(2*100%/3) calc(2*100%/3)}
+  }
