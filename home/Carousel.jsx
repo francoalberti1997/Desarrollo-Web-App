@@ -21,10 +21,10 @@ const Carousel = () => {
                 <img src={daniela} alt="Daniela" className='daniela'/>
                 <img src={rodolfo} alt="Rodolfo" className='rodolfo'/>
             </div>
-            {/* <div className={`owner-carousel ${activeIndex === 1 ? 'active' : ''}`}>
+            <div className={`owner-carousel ${activeIndex === 1 ? 'active' : ''}`}>
                 <img src={delfina} alt="Delfina" className='delfina'/>
                 <img src={seba} alt="Seba" className='seba'/>
-            </div> */}
+            </div>
         </div>
     );
 };
