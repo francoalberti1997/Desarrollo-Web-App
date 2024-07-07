@@ -46,9 +46,10 @@ const Home = () => {
 
                     <Carousel/>
                
-                    {/* <div className='arrow-dw' onClick={handleArrowClick}>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div> */}
+                    {/* <div className='arrow-dw'> */}
+                        {/* <i class="fa-solid fa-chevron-down"></i> */}
+                        
+                    {/* </div> */}
                     <div id="dna">
                         <Dna />
                     </div>
